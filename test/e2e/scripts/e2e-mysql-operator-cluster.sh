@@ -142,7 +142,7 @@ function create_odx_docker_pull_secrets() {
     kubectl --kubeconfig=${KUBECONFIG} \
         -n ${OPERATOR_NAMESPACE} \
         create secret docker-registry odx-docker-pull-secret \
-        --docker-server="wcr.io" \
+        --docker-server="iad.ocir.io" \
         --docker-username=${DOCKER_REGISTRY_USERNAME} \
         --docker-password=${DOCKER_REGISTRY_PASSWORD} \
         --docker-email="k8s@oracle.com"
@@ -151,7 +151,7 @@ function create_odx_docker_pull_secrets() {
         kubectl --kubeconfig=${KUBECONFIG} \
             -n ${TEST_NAMESPACE} \
             create secret docker-registry odx-docker-pull-secret \
-            --docker-server="wcr.io" \
+            --docker-server="iad.ocir.io" \
             --docker-username=${DOCKER_REGISTRY_USERNAME} \
             --docker-password=${DOCKER_REGISTRY_PASSWORD} \
             --docker-email="k8s@oracle.com"
